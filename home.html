@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/1d20f1976e.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Palanquin+Dark&display=swap"
+        rel="stylesheet">
+    <script>
+        if (JSON.parse(localStorage.getItem('userLoggedIn')) !== true)
+            window.location.href = 'login.html';
+    </script>
+</head>
+
+<body>
+    <div class="root-container">
+        <header class="header-container">
+            <nav class="navbar navbar-expand-lg navbar-dark navbar-bg-container fixed-top ">
+                <a class="navbar-brand" href="#navHome">
+                    Burger Mania!
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ml-auto">
+                        <a class="nav-link active pl-4 text-white" href="#home">Home <span
+                                class="sr-only">(current)</span></a>
+                        <a class="nav-link text-white pl-4" href="#manage">Manage</a>
+                        <a class="nav-link text-white pl-4" id="logoutLink" href="">Logout</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <section class="banner-section">
+            <h1>Italy Pizza Menu</h1>
+        </section>
+        <section class="list-section">
+            <ul class="pizza-list" id="pizzaList">
+            </ul>
+        </section>
+
+    </div>
+    <script src="home.js"></script>
+    <script src="navigation.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
